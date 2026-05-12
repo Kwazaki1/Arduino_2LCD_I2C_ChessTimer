@@ -1,0 +1,11 @@
+bool isButtonPressed(int pin, int index);
+void lcdBothPrint(int col, int row, const String& text);
+void lcdBothClear();
+void createArrows();
+void choosemode();
+void choosetime();
+void RunTimmer();
+void displayTime();
+void Reset();
+void MatchSetup();
+void BackButton();
