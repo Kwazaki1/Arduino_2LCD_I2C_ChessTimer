@@ -38,6 +38,8 @@ int m1 = 0,
     incrTime = 5,
     incr = 0;
 
-bool game_running = false;
-bool isPaused     = false;
-bool pl1Turn      = true;
+bool game_running    = false;
+bool isPaused        = false;
+bool pl1Turn         = true;
+bool isPl1BtnPressed = false;
+bool isPl2BtnPressed = false;

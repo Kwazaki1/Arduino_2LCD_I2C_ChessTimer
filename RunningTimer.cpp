@@ -4,21 +4,33 @@
 
 void RunTimmer(){
   if (isButtonPressed(Pause, 0) && !FirstTime) isPaused = !isPaused;
-  if (isButtonPressed(pl2_button, 7) && FirstTime) {
+
+  if (isButtonPressed(pl2_button, 7)) {
+    isPl2BtnPressed = true;
+  }
+  if (isButtonPressed(pl1_button, 6)) { 
+    isPl1BtnPressed = true;
+  }
+
+
+  if (isPl2BtnPressed && FirstTime) {
     isPaused = false;
     FirstTime = false;
+    isPl2BtnPressed = false;
   }
-  if (isButtonPressed(pl1_button, 6) && pl1Turn) { 
+  if (isPl1BtnPressed && pl1Turn) {
     FirstTime2 = true; 
     if (incrTime >=0) countdownTime1 += incr;
     incrTime = 5;
     pl1Turn = false;
+    isPl1BtnPressed = false;
   }
-  if (isButtonPressed(pl2_button, 7) && !pl1Turn) { 
+  if (isPl2BtnPressed && !pl1Turn) { 
     FirstTime2 = true;
     if (incrTime >=0) countdownTime2 += incr;
     incrTime = 5;
     pl1Turn = true;
+    isPl2BtnPressed = false;
   }
 
   now = millis();

@@ -38,5 +38,6 @@ extern const unsigned long debounceDelay;
 extern unsigned long       previousMillis,
                            now,
                            lastButtonTimes[8];
-
+extern bool isPl1BtnPressed;
+extern bool isPl2BtnPressed;
 #endif
