@@ -1,5 +1,4 @@
-#include <hd44780.h>
-#include <hd44780ioClass/hd44780_I2Cexp.h>
+#include "Globals.h"
 
 void lcdBothPrint(int col, int row, const String& text) {
   lcd1.setCursor(col, row); lcd1.print(text);

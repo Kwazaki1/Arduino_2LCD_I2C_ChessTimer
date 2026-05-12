@@ -1,6 +1,6 @@
-#include <Globals.h>
-#include <TimeValuesVariables.h>
-#include <Functions.h>
+#include "Globals.h"
+#include "Functions.h"
+#include "TimeValuesVariables.h"
 
 void MatchSetup(){
   lcdBothClear();

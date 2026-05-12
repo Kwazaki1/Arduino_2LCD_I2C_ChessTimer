@@ -1,5 +1,5 @@
+#include "Globals.h"
 #include <Arduino.h>
-#include <Globals.h>
 
 bool isButtonPressed(int pin, int index) {
   static bool lastState[8] = {false};

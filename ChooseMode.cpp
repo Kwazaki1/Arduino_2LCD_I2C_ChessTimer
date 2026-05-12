@@ -1,5 +1,5 @@
-#include <Globales.h>
-#include <Functions.h>
+#include "Globals.h"
+#include "Functions.h"
 
 void choosemode(){
   if (isButtonPressed(MODE, 0)) {
@@ -10,6 +10,5 @@ void choosemode(){
   }
   else if (isButtonPressed(Pause, 5)) {
     State = 2;
-    lcdBothClear();
   }
 }

@@ -1,3 +1,7 @@
+#ifndef GLOBALS_H
+#define GLOBALS_H
+
+#include <Wire.h>
 #include <hd44780.h>
 #include <hd44780ioClass/hd44780_I2Cexp.h>
 
@@ -34,3 +38,5 @@ extern const unsigned long debounceDelay;
 extern unsigned long       previousMillis,
                            now,
                            lastButtonTimes[8];
+
+#endif

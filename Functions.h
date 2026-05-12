@@ -8,4 +8,4 @@ void RunTimmer();
 void displayTime();
 void Reset();
 void MatchSetup();
-void BackButton();
+void Back();

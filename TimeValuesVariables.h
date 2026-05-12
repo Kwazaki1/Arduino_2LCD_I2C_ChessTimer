@@ -5,6 +5,7 @@ extern int m1,
            s2,
            countdownTime1,
            countdownTime2,
+           incrTime,
            incr;
 
 //for checking for game condition

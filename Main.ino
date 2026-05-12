@@ -1,14 +1,15 @@
-#include <Globals.h>
-#include <Functions.h>
-#include <TimeValuesVariables.h>
+#include "Globals.h"
+#include "Functions.h"
+#include "TimeValuesVariables.h"
 
 void setup(){
   int buttonPins[] = {Pause, pl1_button, pl2_button, MODE, BACK, RESET};
   for (int i = 0; i < 6; i++){
-    pinMode(buttonPins[i], INPUT_PULLUP);}
+    pinMode(buttonPins[i], INPUT_PULLUP);
+  }
   pinMode(BUZZER, OUTPUT); digitalWrite(BUZZER, LOW);
-  pinMode(LED_PIN, OUTPUT);
-  digitalWrite(LED_PIN, LOW);
+  pinMode(LED, OUTPUT);
+  digitalWrite(LED, LOW);
   lcd1.init(); lcd2.init();
   lcd1.backlight(); lcd2.backlight();
   createArrows();
