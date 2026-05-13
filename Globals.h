@@ -27,6 +27,7 @@ extern int mod,
            mod3;
 
 extern int State;
+extern int reset;
 
 //Contraindications to unnecessary repetition of functions
 extern bool FirstTime,

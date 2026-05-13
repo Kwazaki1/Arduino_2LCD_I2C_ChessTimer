@@ -26,22 +26,3 @@ bool isButtonPressed(int pin, int index) {
 
   return false;
 }
-
-
-//old version
-/*bool isButtonPressed(int pin, int index) {
-  if (digitalRead(pin) == LOW) {
-    unsigned long now = millis();
-
-    if (now - lastButtonTimes[index] > debounceDelay) {
-      lastButtonTimes[index] = now;
-
-      digitalWrite(LED, HIGH);
-      delay(40);
-      digitalWrite(LED, LOW);
-
-      return true;
-    }
-  }
-  return false;
-}*/

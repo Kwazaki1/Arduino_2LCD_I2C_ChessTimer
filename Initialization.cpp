@@ -28,6 +28,7 @@ int mod1  = 0;
 int mod2  = 0;
 int mod3  = 0;
 int State = 0;
+int reset = 0;
 
 int m1 = 0,
     s1 = 0,
@@ -35,7 +36,7 @@ int m1 = 0,
     s2 = 0,
     countdownTime1 = 0,
     countdownTime2 = 0,
-    incrTime = 5,
+    incrTime = 6,
     incr = 0;
 
 bool game_running    = false;

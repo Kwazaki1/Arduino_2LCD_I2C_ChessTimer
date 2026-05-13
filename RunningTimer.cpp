@@ -4,32 +4,31 @@
 
 void RunTimmer(){
   if (isButtonPressed(Pause, 0) && !FirstTime) isPaused = !isPaused;
-
-  if (isButtonPressed(pl2_button, 7)) {
-    isPl2BtnPressed = true;
-  }
   if (isButtonPressed(pl1_button, 6)) { 
     isPl1BtnPressed = true;
   }
-
-
+  if (isButtonPressed(pl2_button, 7)) {
+    isPl2BtnPressed = true;
+  }
   if (isPl2BtnPressed && FirstTime) {
     isPaused = false;
     FirstTime = false;
     isPl2BtnPressed = false;
   }
-  if (isPl1BtnPressed && pl1Turn) {
+  else if (isPl1BtnPressed && pl1Turn) {
+    countdownTime1 += incr;
     FirstTime2 = true; 
-    if (incrTime >=0) countdownTime1 += incr;
-    incrTime = 5;
     pl1Turn = false;
     isPl1BtnPressed = false;
   }
-  if (isPl2BtnPressed && !pl1Turn) { 
+  else if (isPl2BtnPressed && !pl1Turn) { 
+    countdownTime2 += incr;
     FirstTime2 = true;
-    if (incrTime >=0) countdownTime2 += incr;
-    incrTime = 5;
     pl1Turn = true;
+    isPl2BtnPressed = false;
+  }
+  else {
+    isPl1BtnPressed = false;
     isPl2BtnPressed = false;
   }
 
@@ -40,14 +39,13 @@ void RunTimmer(){
     return;
   }
 
-
   else if (!isPaused && now - previousMillis >= 1000) {
     previousMillis += 1000;
-    if (pl1Turn && countdownTime1 > 0){
-      countdownTime1--;
-      incrTime--;
-      }
+    
+    if (pl1Turn && countdownTime1 > 0) countdownTime1--;
+      
     else if (!pl1Turn && countdownTime2 > 0) countdownTime2--;
+
     displayTime();
 
     if (countdownTime1 == 0 || countdownTime2 == 0) {
