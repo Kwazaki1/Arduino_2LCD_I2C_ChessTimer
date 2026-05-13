@@ -25,7 +25,7 @@ void loop(){
   else if (State == 2) choosetime();
 
   else if (State == 3){
-    if (!game_running) MatchSetup();
+    if (game_running == false) MatchSetup();
     RunTimmer();
   }
 

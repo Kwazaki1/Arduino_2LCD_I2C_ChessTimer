@@ -41,4 +41,5 @@ extern unsigned long       previousMillis,
                            lastButtonTimes[8];
 extern bool isPl1BtnPressed;
 extern bool isPl2BtnPressed;
+extern bool ChooseModeScreenError;
 #endif

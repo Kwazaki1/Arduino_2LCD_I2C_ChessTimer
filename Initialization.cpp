@@ -44,3 +44,4 @@ bool isPaused        = false;
 bool pl1Turn         = true;
 bool isPl1BtnPressed = false;
 bool isPl2BtnPressed = false;
+bool ChooseModeScreenError = true;

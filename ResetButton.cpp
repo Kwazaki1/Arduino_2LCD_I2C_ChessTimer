@@ -9,8 +9,8 @@ void Reset(){
   switch (mod) {
     case 0:
       switch (reset) {
-        case 0: lcdBothPrint(9, 1, "90 min "); countdownTime1 = countdownTime2 = 5400; break;
-        case 1: lcdBothPrint(9, 1, "60 min "); countdownTime1 = countdownTime2 = 3600; break;
+        case 0: lcdBothPrint(9, 1, "60 min "); countdownTime1 = countdownTime2 = 3600; break;
+        case 1: lcdBothPrint(9, 1, "90 min "); countdownTime1 = countdownTime2 = 5400; break;
       }
    break;
 
