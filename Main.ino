@@ -3,7 +3,7 @@
 #include "TimeValuesVariables.h"
 
 void setup(){
-  int buttonPins[] = {Pause, pl1_button, pl2_button, MODE, BACK, RESET};
+  int buttonPins[] = {Select, Mode, Reset, Back, Pl1, Pl2};
   for (int i = 0; i < 6; i++){
     pinMode(buttonPins[i], INPUT_PULLUP);
   }
@@ -13,27 +13,28 @@ void setup(){
   lcd1.init(); lcd2.init();
   lcd1.backlight(); lcd2.backlight();
   createArrows();
-  lcdBothPrint(2, 1, "Choose Mode");
-  State = 1;
   previousMillis = millis();
 }
 
 void loop(){
 
-  if (State == 1) choosemode();
+  if (State == 0) firstMassage();
 
-  else if (State == 2) choosetime();
+  else if (State == 1) chooseMode();
+
+  else if (State == 2) chooseTime();
 
   else if (State == 3){
-    if (game_running == false) MatchSetup();
-    RunTimmer();
+    if (game_running == false) matchSetup();
+    runTimmer();
   }
 
-  if (isButtonPressed(RESET, 2) && State == 3){
-    Reset();
+  if (isButtonPressed(Reset)){
+    if (State == 3) resetFun();
+    else return;
   }
 
-  else if (isButtonPressed(BACK, 1)){
-    Back();
+  else if (isButtonPressed(Back)){
+    backFun();
   }
 }
